@@ -1,0 +1,103 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3ebfd 0%, #c8ddfd 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.registro-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.registro-card {
+    background: #fff;
+    padding: 2.5rem 2.5rem 1.5rem 2.5rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px 0 rgba(80, 112, 255, 0.10);
+    width: 100%;
+    max-width: 420px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.registro-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #111;
+}
+
+.auth-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.auth-label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.auth-input {
+    padding: 0.75rem 1rem;
+    border: 1.5px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    background: #f9fafb;
+    transition: border-color 0.2s;
+}
+
+.auth-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #fff;
+}
+
+.auth-button {
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 0;
+    width: 100%;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s cubic-bezier(.4,2,.6,1);
+}
+
+.auth-button:hover {
+    background: #1746a2;
+    transform: scale(1.04);
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 1rem;
+    color: #888;
+}
+
+.auth-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.2s, color 0.2s;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+    color: #1746a2;
+}

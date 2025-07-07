@@ -1,0 +1,105 @@
+body {
+    min-height: 100vh;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', 'Roboto', Arial, sans-serif;
+    background: linear-gradient(135deg, #e3ebfd 0%, #c8ddfd 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+.login-card {
+    background: #fff;
+    padding: 3rem 3rem 2rem 3rem;
+    border-radius: 16px;
+    box-shadow: 0 4px 32px 0 rgba(80, 112, 255, 0.1);
+    width: 100%;
+    max-width: 540px;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+}
+
+.login-title {
+    font-size: 2.2rem;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #151515;
+}
+
+.auth-field {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 1.25rem;
+}
+
+.auth-label {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+    color: #222;
+}
+
+.auth-input {
+    padding: 0.75rem 1rem;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 1rem;
+    color: #111;
+    background: #f9fafb;
+    transition: border-color 0.2s;
+}
+
+.auth-input:focus {
+    outline: none;
+    border-color: #2563eb;
+    background: #fff;
+}
+
+.auth-button {
+    background: #2563eb;
+    color: #fff;
+    font-weight: 600;
+    font-size: 1.15rem;
+    border: none;
+    border-radius: 8px;
+    padding: 1rem 0;
+    width: 100%;
+    margin-top: 0.5rem;
+    cursor: pointer;
+    transition: background 0.2s;
+}
+
+.auth-button:hover {
+    background: #1746a2;
+    transform: scale(1.04);
+}
+
+.auth-link {
+    text-align: center;
+    margin-top: 1rem;
+    font-size: 0.98rem;
+    color: #2563eb;
+}
+
+.auth-link a {
+    color: #2563eb;
+    text-decoration: none;
+    font-weight: 500;
+    transition: text-decoration 0.2s, color 0.2s;
+}
+
+.auth-link a:hover {
+    text-decoration: underline;
+    color: #1746a2;
+}
