@@ -28,20 +28,7 @@ export const register = async (req: Request, res: Response) => {
         res.status(500).json({ error: 'Error en el servidor' });
     }
 };
-export const createUser = async (req, res) => {
-    try {
-        const { name, email } = req.body;
 
-        const { rows } = await pool.query(
-            "INSERT INTO users (name, email) VALUES ($1, $2) RETURNING *",
-            [name, email]
-        );
-
-        res.status(201).json(rows[0]);
-    } catch (error) {
-        return res.status(500).json({ error: error.message });
-    }
-};
 
 export const login = async (req: Request, res: Response) => {
     try {
