@@ -1,17 +1,17 @@
-import { Toaster } from "./Nueva carpeta/components/ui/toaster";
-import { Toaster as Sonner } from "./Nueva carpeta/components/ui/sonner";
-import { TooltipProvider } from "./Nueva carpeta/components/ui/tooltip";
+import { Toaster } from "./components/ui/toaster";
+import { Toaster as Sonner } from "./components/ui/sonner";
+import { TooltipProvider } from "./components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AuthProvider } from "./contexts/AuthContext";
-import ProtectedRoute from "./Nueva carpeta/components/ProtectedRoute";
-import Index from "./pantallas/Introduccion.tsx";
-import Login from "./pantallas/Login.tsx";
-import Register from "./pantallas/Registro.tsx";
-import Posts from "./pantallas/Posts.tsx";
-import PostDetail from "./pantallas/PostDetail.tsx";
-import Profile from "./pantallas/Profile.tsx";
-import NotFound from "./pantallas/NotFound.tsx";
+import ProtectedRoute from "./components/ProtectedRoute";
+import Index from "./pages/Intro.tsx";
+import Login from "./pages/Login.tsx";
+import Register from "./pages/Register.tsx";
+import Posts from "./pages/Posts.tsx";
+import PostDetail from "./pages/PostDetail.tsx";
+import Profile from "./pages/Profile.tsx";
+import NotFound from "./pages/NotFound.tsx";
 
 const queryClient = new QueryClient();
 

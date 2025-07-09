@@ -101,3 +101,11 @@ body {
     text-decoration: underline;
     color: #1746a2;
 }
+.auth-error-message {
+    color: #e63946;
+    background-color: #ffe3e3;
+    padding: 10px;
+    margin-bottom: 15px;
+    border-radius: 6px;
+    font-weight: bold;
+}

@@ -43,6 +43,8 @@
 }
 
 .post-detail-content-text {
+  overflow-wrap: break-word;
+
   line-height: 1.7;
   color: #374151;
   white-space: pre-wrap;
