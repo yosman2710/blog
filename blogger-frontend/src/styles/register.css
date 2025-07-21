@@ -9,6 +9,7 @@ body {
     justify-content: center;
 }
 
+/* Contenedor principal centrado */
 .registro-container {
     display: flex;
     align-items: center;
@@ -16,6 +17,7 @@ body {
     min-height: 100vh;
 }
 
+/* Tarjeta del formulario */
 .registro-card {
     background: #fff;
     padding: 2.5rem 2.5rem 1.5rem 2.5rem;
@@ -29,6 +31,7 @@ body {
     align-items: stretch;
 }
 
+/* Título */
 .registro-title {
     font-size: 2.2rem;
     font-weight: 700;
@@ -37,25 +40,29 @@ body {
     color: #111;
 }
 
+/* Campo de formulario */
 .auth-field {
     display: flex;
     flex-direction: column;
     margin-bottom: 1.25rem;
 }
 
+/* Etiqueta */
 .auth-label {
     font-size: 1rem;
     margin-bottom: 0.5rem;
     color: #222;
 }
 
+/* Input */
 .auth-input {
-    padding: 0.75rem 1rem;
+    padding: 0.75rem 1rem 0.75rem 2.75rem;
     border: 1.5px solid #e5e7eb;
     border-radius: 8px;
     font-size: 1rem;
     background: #f9fafb;
     transition: border-color 0.2s;
+    width: 100%;
 }
 
 .auth-input:focus {
@@ -64,13 +71,53 @@ body {
     background: #fff;
 }
 
+.form-input::placeholder {
+    color: #9ca3af;
+}
+
+/* Wrapper para íconos e input */
+.input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+/* Ícono dentro del input */
+.input-icon {
+    position: absolute;
+    left: 1rem;
+    color: #9ca3af;
+    z-index: 1;
+    pointer-events: none;
+}
+
+/* Botón de mostrar/ocultar contraseña */
+.password-toggle {
+    position: absolute;
+    right: 1rem;
+    background: none;
+    border: none;
+    color: #9ca3af;
+    cursor: pointer;
+    padding: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: color 0.3s ease;
+}
+
+.password-toggle:hover {
+    color: #6b7280;
+}
+
+/* Botón principal */
 .auth-button {
     background: #2563eb;
     color: #fff;
     font-weight: 600;
     font-size: 1.1rem;
     border: none;
-    border-radius: 8px;
+    border-radius: 50px;
     padding: 1rem 0;
     width: 100%;
     margin-top: 0.5rem;
@@ -83,6 +130,7 @@ body {
     transform: scale(1.04);
 }
 
+/* Enlace inferior */
 .auth-link {
     text-align: center;
     margin-top: 1rem;
@@ -101,6 +149,8 @@ body {
     text-decoration: underline;
     color: #1746a2;
 }
+
+/* Mensaje de error */
 .auth-error-message {
     color: #e63946;
     background-color: #ffe3e3;

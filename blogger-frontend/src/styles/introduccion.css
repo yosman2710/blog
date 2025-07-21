@@ -50,7 +50,7 @@ body {
     border: none;
     padding: 12px 32px;
     font-size: 1rem;
-    border-radius: 8px;
+    border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.2s;
@@ -58,6 +58,8 @@ body {
 
 .boton-registro:hover {
     background: #1e40af;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .boton-inicio-sesion {
@@ -66,7 +68,7 @@ body {
     border: 2px solid #e5e7eb;
     padding: 12px 32px;
     font-size: 1rem;
-    border-radius: 8px;
+    border-radius: 50px;
     font-weight: 600;
     cursor: pointer;
     transition: border 0.2s, color 0.2s;
@@ -75,6 +77,8 @@ body {
 .boton-inicio-sesion:hover {
     border-color: #2563eb;
     color: #2563eb;
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 .index-caracteristicas-section {
@@ -136,3 +140,55 @@ body {
     font-size: 1rem;
     color: #4a5568;
 }
+.stats-section {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    margin-bottom: 4rem;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.stats-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 2rem;
+    text-align: center;
+}
+
+.stat-number {
+    font-size: 3rem;
+    font-weight: bold;
+    color: #1a2236;
+    margin-bottom: 0.5rem;
+}
+
+.stat-label {
+    color: rgb(26, 34, 54);
+    font-weight: 500;
+}
+
+.final-cta {
+    text-align: center;
+}
+
+.final-cta-title {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: #1a2236;
+    margin-bottom: 1rem;
+}
+
+.final-cta-text {
+    font-size: 1.125rem;
+    color: rgb(26, 34, 54);
+    margin-bottom: 2rem;
+    max-width: 500px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+
+
+
+

@@ -62,6 +62,32 @@ const Intro = () => {
                         <p className="index-caracteristica-description">Únete a una comunidad de escritores y lectores</p>
                     </div>
                 </div>
+                <div className="stats-section">
+                    <div className="stats-grid">
+                        <div>
+                            <div className="stat-number">100%</div>
+                            <div className="stat-label">Seguro</div>
+                        </div>
+                        <div>
+                            <div className="stat-number">24/7</div>
+                            <div className="stat-label">Disponible</div>
+                        </div>
+                        <div>
+                            <div className="stat-number">∞</div>
+                            <div className="stat-label">Posibilidades</div>
+                        </div>
+                        <div>
+                            <div className="stat-number">+1M</div>
+                            <div className="stat-label">Usuarios</div>
+                        </div>
+                    </div>
+                </div>
+                <div className="final-cta">
+                    <h2 className="final-cta-title">¿Listo para comenzar?</h2>
+                    <p className="final-cta-text">
+                        Únete a miles de usuarios que ya están disfrutando de esta nueva experiencia.
+                    </p>
+                </div>
             </div>
         </div>
     );

@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
-import '../styles/registro.css';
+import '../styles/register.css';
+import { User, Mail, Lock, Eye, EyeOff } from 'lucide-react';
 import axios from 'axios';
 
 const Register = () => {
@@ -26,63 +27,70 @@ const Register = () => {
                 setErrorMessage('Ocurrió un error inesperado. Intenta de nuevo.'+ error);
         }
     };
+    const [showPassword, setShowPassword] = useState(false);
+
+    const togglePasswordVisibility = () => {
+        setShowPassword(!showPassword);
+    };
 
     return (
         <div className="registro-container">
             <div className="registro-card">
-                <h1 className="registro-title">Crear una Cuenta</h1>
-
-                {errorMessage && (
-                    <div className="auth-error-message">
-                        ⚠️ {errorMessage}
+                <div className="registro-title">Crear una Cuenta</div>
+                {errorMessage && <div className="auth-error-message">{errorMessage}</div>}
+                <div className="auth-field">
+                    <label className="auth-label">Nombre</label>
+                    <div className="input-wrapper">
+                        <User className="input-icon" />
+                        <input
+                            className="auth-input form-input"
+                            type="text"
+                            placeholder="Ingresa tu nombre completo"
+                            value={name}
+                            onChange={e => setName(e.target.value)}
+                        />
                     </div>
-                )}
-
-                <div className="auth-field">
-                    <label htmlFor="name" className="auth-label">Nombre</label>
-                    <input
-                        type="text"
-                        id="name"
-                        className="auth-input"
-                        value={name}
-                        onChange={(e) => setName(e.target.value)}
-                        required
-                    />
                 </div>
-
                 <div className="auth-field">
-                    <label htmlFor="email" className="auth-label">Correo electrónico</label>
-                    <input
-                        type="email"
-                        id="email"
-                        className="auth-input"
-                        value={email}
-                        onChange={(e) => setEmail(e.target.value)}
-                        required
-                    />
+                    <label className="auth-label">Correo electrónico</label>
+                    <div className="input-wrapper">
+                        <Mail className="input-icon" />
+                        <input
+                            className="auth-input form-input"
+                            type="email"
+                            placeholder="correo@ejemplo.com"
+                            value={email}
+                            onChange={e => setEmail(e.target.value)}
+                        />
+                    </div>
                 </div>
-
                 <div className="auth-field">
-                    <label htmlFor="password" className="auth-label">Contraseña</label>
-                    <input
-                        id="password"
-                        type="password"
-                        className="auth-input"
-                        value={password}
-                        onChange={(e) => setPassword(e.target.value)}
-                        required
-                    />
+                    <label className="auth-label">Contraseña</label>
+                    <div className="input-wrapper">
+                        <Lock className="input-icon" />
+                        <input
+                            className="auth-input form-input"
+                            type={showPassword ? "text" : "password"}
+                            placeholder="Crea una contraseña segura"
+                            value={password}
+                            onChange={e => setPassword(e.target.value)}
+                        />
+                        <button
+                            type="button"
+                            className="password-toggle"
+                            onClick={togglePasswordVisibility}
+                        >
+                            {showPassword ? <EyeOff /> : <Eye />}
+                        </button>
+                    </div>
                 </div>
-
-                <button type="submit" className="auth-button" onClick={createUser}>
-                    Crear Cuenta
-                </button>
-
-                <p className="auth-link">
+                <button className="auth-button" onClick={createUser}>Crear Cuenta</button>
+                <div className="auth-link">
                     ¿Ya tienes cuenta? <Link to="/login">Inicia sesión</Link>
-                </p>
+                </div>
             </div>
         </div>
+
     );
 };
 
